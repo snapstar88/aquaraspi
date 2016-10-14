@@ -26,16 +26,16 @@ try:
         wtemp = responselist[2];
         iwtemp = int(wtemp);
 
-        if ihumi >= 90:
+        if ihumi >= 90.00:
                     print("Zimmer zu feucht")
         else:
                     print("ok")
 
-        if irtemp >= 23:
+        if irtemp >= 23.00:
                     print("Zimmer zu warm")
         else:
                     print("ok")
-        if iwtemp >= 25:
+        if iwtemp >= 25.00:
                     print("Wasser zu warm")
         else:
                     print("ok")
