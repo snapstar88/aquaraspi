@@ -31,9 +31,9 @@ try:
         wtemp = round(iwtemp);
 
         if humi >= 90:
-                    print("Zimmer zu feucht")
+                    print 'Zimmer zu feucht ', humi, 'C'
         else:
-                    print("ok")
+                    print("Zimmer ok ", humi, 'C')
 
         if rtemp >= 23:
                     print("Zimmer zu warm")
