@@ -30,19 +30,20 @@ try:
         iwtemp = int(wtemp);
         wtemp = round(iwtemp);
 
-        if humi >= 90:
-                    print 'Zimmer zu feucht ', humi, 'C'
+        if humi >= 70:
+                    print 'Warnung!!! Zimmer zu feucht. ', humi, ' %'
         else:
-                    print("Zimmer ok ", humi, 'C')
+                    print 'Zimmefeuchtigkeit OK ', humi, ' %'
 
         if rtemp >= 23:
-                    print("Zimmer zu warm")
+                    print 'Warnung!!! Zimmer zu warm. ', rtemp,' C'
         else:
-                    print("ok")
-        if wtemp >= 25:
-                    print("Wasser zu warm")
+                    print 'Zimmertemperatur OK ', rtemp,' C'
+        
+        if wtemp >= 27:
+                    print 'Warnung!!! Wasser zu warm.', wtemp, ' C'        
         else:
-                    print("ok")
+                    print 'Wassertemperatur OK ', wtemp, 'C'
 
 except KeyboardInterrupt:
         #print("nix")
