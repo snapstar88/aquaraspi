@@ -13,9 +13,9 @@ s.write("test")
 
 try:
     while True:
-
+        time.sleep(1);
         response = s.readline()
-        #response = "47_22_22"
+        #response = "47_40_40"
 
 
 
@@ -29,18 +29,18 @@ try:
 
 
         if humi >= 90:
-                    print("ACHTUNG!!!! Zimmer zu feucht! Feuchtigkeit = ",humi)
+                    print 'ACHTUNG!!!! Zimmer zu feucht! Feuchtigkeit = ', humi,'%'
         else:
-                    print("Zimmer OK. Feuchtigkeit = ",humi)
+                    print 'Zimmerfeuchtigkeit OK = ',humi ,'%'
 
         if rtemp >= 23:
-                    print("ACHTUNG!!!! Zimmer zu warm. Temperatur = ",rtemp)
+                    print 'ACHTUNG!!!! Zimmer zu warm. Temperatur = ',rtemp,'Grad'
         else:
-                    print("Zimmer OK. Temperatur = ",rtemp)
+                    print 'Zimmertemperatur OK = ',rtemp, 'Grad'
         if wtemp >= 25:
-                    print("AUCHTUNG!!!! Wasser zu warm. Temperatur = ",wtemp)
+                    print 'AUCHTUNG!!!! Wasser zu warm. Temperatur = ',wtemp,'Grad'
         else:
-                    print("Wasser OK. Temperatur = ",wtemp)
+                    print 'Wassertemperatur OK = ',wtemp,'Grad'
 
 except KeyboardInterrupt:
         print("nix")
