@@ -6,18 +6,58 @@ s.isOpen()
 time.sleep(5) # der Arduino resettet nach einer Seriellen Verbindung, daher muss kurz gewartet werden
 
 s.write("test")
-wasser = "wasser";
+
+
 
 try:
     while True:
+        
         response = s.readline()
-        print(response)
-    
-        print find.wasser(wasser)
+        #response = "91_23_26"
+        
+           
+        
+        responselist = response.split("_");
+        
+        humi = responselist[0];
+        ihumi = int(humi);
+        rtemp = responselist[1];
+        irtemp = int(rtemp);
+        wtemp = responselist[2];
+        iwtemp = int(wtemp);
 
+        if ihumi >= 90:
+                    print("Zimmer zu feucht")
+        else:
+                    print("ok")
+
+        if irtemp >= 23:
+                    print("Zimmer zu warm")
+        else:
+                    print("ok")
+        if iwtemp >= 25:
+                    print("Wasser zu warm")
+        else:
+                    print("ok")
 
 except KeyboardInterrupt:
-    s.close()
+        #print("nix")
+        s.close()
+        
+      
+        
+               
+
+
+         
+        
+
+    
+        
+   
+
+
+
 
 
 
