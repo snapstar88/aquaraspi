@@ -20,7 +20,8 @@ try:
         
         responselist = response.split("_");
         
-        humi = responselist[0];
+        
+        humi = int(responselist[0]);
         ihumi = int(humi);
         rtemp = responselist[1];
         irtemp = int(rtemp);
@@ -29,18 +30,18 @@ try:
         
 
         if ihumi >= 90:
-                    print("Zimmer zu feucht")
+                    print("ACHTUNG!!!! Zimmer zu feucht! Feuchtigkeit = " + humi)
         else:
-                    print("ok")
+                    print("Zimmer OK. Feuchtigkeit = " + ihumi)
 
         if irtemp >= 23:
-                    print("Zimmer zu warm")
+                    print("ACHTUNG!!!! Zimmer zu warm. Temperatur = " + irtemp)
         else:
-                    print("ok")
+                    print("Zimmer OK. Temperatur = " + irtemp)
         if iwtemp >= 25:
-                    print("Wasser zu warm")
+                    print("AUCHTUNG!!!! Wasser zu warm. Temperatur = " + iwtemp)
         else:
-                    print("ok")
+                    print("Wasser OK. Temperatur = " + iwtemp)
 
 except KeyboardInterrupt:
         #print("nix")
