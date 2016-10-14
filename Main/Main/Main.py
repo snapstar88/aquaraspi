@@ -12,9 +12,9 @@ s.write("test")
 
 try:
     while True:
-        timte.sleep(2);
+        
         response = s.readline()
-        #response = "47_22_22"
+        #response = "91_23_26"
         
            
         
@@ -22,22 +22,24 @@ try:
         
         humi = responselist[0];
         ihumi = int(humi);
+        humi = round(ihumi)
         rtemp = responselist[1];
         irtemp = int(rtemp);
+        rtemp = round(irtemp)
         wtemp = responselist[2];
         iwtemp = int(wtemp);
-        
+        wtemp = round(iwtemp);
 
-        if ihumi >= 90:
+        if humi >= 90:
                     print("Zimmer zu feucht")
         else:
                     print("ok")
 
-        if irtemp >= 23:
+        if rtemp >= 23:
                     print("Zimmer zu warm")
         else:
                     print("ok")
-        if iwtemp >= 25:
+        if wtemp >= 25:
                     print("Wasser zu warm")
         else:
                     print("ok")
@@ -45,3 +47,16 @@ try:
 except KeyboardInterrupt:
         #print("nix")
         s.close()
+      
+        
+               
+
+
+         
+        
+
+    
+        
+   
+
+
