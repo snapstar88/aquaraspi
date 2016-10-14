@@ -6,10 +6,16 @@ s.isOpen()
 time.sleep(5) # der Arduino resettet nach einer Seriellen Verbindung, daher muss kurz gewartet werden
 
 s.write("test")
+wasser = "wasser";
+
 try:
     while True:
         response = s.readline()
         print(response)
+    
+        print find.wasser(wasser)
+
+
 except KeyboardInterrupt:
     s.close()
 
