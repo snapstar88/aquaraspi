@@ -31,16 +31,16 @@ try:
         if humi >= 90:
                     print("ACHTUNG!!!! Zimmer zu feucht! Feuchtigkeit = ",humi)
         else:
-                    print("Zimmer OK. Feuchtigkeit = ", humi)
+                    print("Zimmer OK. Feuchtigkeit = ",humi)
 
         if rtemp >= 23:
-                    print("ACHTUNG!!!! Zimmer zu warm. Temperatur = ", rtemp)
+                    print("ACHTUNG!!!! Zimmer zu warm. Temperatur = ",rtemp)
         else:
-                    print("Zimmer OK. Temperatur = ", rtemp)
+                    print("Zimmer OK. Temperatur = ",rtemp)
         if wtemp >= 25:
-                    print("AUCHTUNG!!!! Wasser zu warm. Temperatur = ", wtemp)
+                    print("AUCHTUNG!!!! Wasser zu warm. Temperatur = ",wtemp)
         else:
-                    print("Wasser OK. Temperatur = ", wtemp)
+                    print("Wasser OK. Temperatur = ",wtemp)
 
 except KeyboardInterrupt:
         print("nix")
