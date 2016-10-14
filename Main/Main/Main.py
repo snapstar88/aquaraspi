@@ -13,8 +13,8 @@ import math
 try:
     while True:
         
-        #response = s.readline()
-        response = "47_22_22"
+        response = s.readline()
+        #response = "47_22_22"
         
            
         
@@ -43,8 +43,8 @@ try:
                     print("ok")
 
 except KeyboardInterrupt:
-        print("nix")
-        #s.close()
+        #print("nix")
+        s.close()
         
       
         
